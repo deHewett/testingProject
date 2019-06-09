@@ -11,6 +11,7 @@ public class Box {
     private Customer customer;
     private Depot depot; 
     private int capacity = 20;
+    
 
     public Box(Customer customer, Depot depot) {
         this.customer = customer;
@@ -23,6 +24,11 @@ public class Box {
         this.depot = depot;
         contents = new Manifest();
         this.capacity = newCapacity;
+    }
+    
+    public double getCapacity()
+    {
+        return (double)capacity;
     }
     
     

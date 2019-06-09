@@ -37,7 +37,6 @@ public class Manifest {
         }
     }
     public void removeProduct(Product p) {
-        System.out.println("This is quantities(p): " + quantities.get(p));
         if (quantities.get(p) == null) {
                 return;
             }
@@ -60,7 +59,7 @@ public class Manifest {
     public double getTotalWeight() {
         double weight = 0;
         for (Product p : quantities.keySet()) {
-            weight = quantities.get(p) * p.getWeight();
+            weight += quantities.get(p) * p.getWeight();
         }
         return weight;
     }
